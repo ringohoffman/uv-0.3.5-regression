@@ -2,7 +2,7 @@
 
 Minimum reproducible example for a regression introduced in `uv==0.3.5` where changes to `pyproject.toml` are not apparently respected.
 
-```shell
+```console
 $ conda create -n regression python=3.10 -y
 $ conda activate regression
 $ pip install uv==0.3.5
@@ -17,7 +17,7 @@ $ uv pip install -e .
 
 Solve the unsatisfiability by downgrading `torchvision` to `0.18.1`.
 
-```shell
+```console
 $ uv pip install -e .
   × No solution found when resolving dependencies:
   ╰─▶ Because torchvision==0.19.0 depends on torch==2.4.0 and uv-regression==0.0.0 depends on torch==2.3.1, we can conclude that torchvision==0.19.0 and uv-regression==0.0.0
@@ -28,7 +28,7 @@ $ uv pip install -e .
 
 The same failure, despite the change to `pyproject.toml`. Try downgrading `uv` to `0.3.4`.
 
-```shell
+```console
 $ pip install uv==0.3.4
 $ uv pip install -e .
 Resolved 13 packages in 866ms
