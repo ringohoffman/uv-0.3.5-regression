@@ -7,7 +7,6 @@ $ conda create -n regression python=3.10 -y
 $ conda activate regression
 $ pip install uv==0.3.5
 $ uv pip install -e .
- 
   × No solution found when resolving dependencies:
   ╰─▶ Because torchvision==0.19.0 depends on torch==2.4.0 and uv-regression==0.0.0 depends on torch==2.3.1, we can conclude that torchvision==0.19.0 and uv-regression==0.0.0
       are incompatible.
